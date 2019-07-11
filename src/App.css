@@ -1,33 +1,112 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  position: absolute;
+  width: 40%;
+  background-color: rgb(247, 247, 247);
+  margin-left: 30%;
+  top: 50px;
   display: flex;
   flex-direction: column;
+  box-shadow: 1px 1px 3px 0px rgba(160, 160, 160, 0.75);
+  padding: 20px;
+}
+header{
+  font-size: 1.5em;
+  padding: 15px 0;
+  display: flex;
+  width: 100%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+.input{
+  width: 55%;
+  height: 35px;
+  padding: 5px;
+  font-size: .9em;
+  border:  1px solid rgb(190, 191, 255);;
+  outline:none;
+}
+/* input:focus{
+  border: 1px solid rgb(54, 40, 255);
+} */
+.addTaskBtn{
+  width: 12%;
+  background-color: rgb(112, 134, 255);
+  color: rgb(240, 240, 240);
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  font-size: .9em;
+  margin-left: -15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(102, 102, 102, 0.75);
+  cursor: pointer;
+}
+.addTaskBtn:hover{
+  background-color: rgb(97, 121, 255);
+  box-shadow: 0px 0px 4px rgba(170, 170, 170, 0.75);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.list-group-item {
+  user-select: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-group input[type="checkbox"] {
+  display: none;
+}
+
+.list-group input[type="checkbox"] + .list-group-item {
+  cursor: pointer;
+}
+
+.list-group input[type="checkbox"] + .list-group-item:before {
+  content: "\2713";
+  color: transparent;
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.list-group input[type="checkbox"]:checked + .list-group-item {
+  background-color: #0275D8;
+  color: #FFF;
+}
+
+.list-group input[type="checkbox"]:checked + .list-group-item:before {
+  color: inherit;
+}
+
+.list-group input[type="radio"] {
+  display: none;
+}
+
+.list-group input[type="radio"] + .list-group-item {
+  cursor: pointer;
+}
+
+.list-group input[type="radio"] + .list-group-item:before {
+  content: "\2022";
+  color: transparent;
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.list-group input[type="radio"]:checked + .list-group-item {
+  background-color: #0275D8;
+  color: #FFF;
+}
+
+.list-group input[type="radio"]:checked + .list-group-item:before {
+  color: inherit;
+}
+.form-control{
+  width: 80%;
+}
+.btn-lg{
+  margin: 0 5% 0 2%;
+}
+.switch{
+  margin-right: 5px;
 }
