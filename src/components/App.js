@@ -43,8 +43,11 @@ function App() {
 
     addTask(newState)
   }
+  const onBeforeDragStart = () => {
+    window.navigator.vibrate([100])
+  }
   return (
-    <DragDropContext onDragEnd={onDragEnd}>
+    <DragDropContext onDragEnd={onDragEnd} onBeforeDragStart={onBeforeDragStart}>
     <div className="App">
       <header>
         <input className="form-control form-control-lg" type="text" placeholder='Write your task' ref={(node) => inputTask = node} />
